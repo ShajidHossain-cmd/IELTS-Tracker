@@ -13,3 +13,22 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+model User {
+  id  Int @id @default(autoincrement())
+  sessions Sessions[]
+
+}
+
+model Sessions {
+
+id String @id
+
+userId Int 
+
+expiresAt DateTime
+
+user User @relation(references: [id],fields: [userId], onDelete: Cascade)
+
+}
