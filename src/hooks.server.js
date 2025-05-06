@@ -23,7 +23,8 @@ export async function createSession(token, userId) {
     expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30), // count till 30 days
   };
   await prisma.session.create({
-    // stores the session to the db
+    // stores the session to the db .
+
     data: session,
   });
   return session;
@@ -76,3 +77,4 @@ function getSessionValidationResult(session, user) {
     return { session: null, user: null };
   }
 }
+const gittt = anoying;
