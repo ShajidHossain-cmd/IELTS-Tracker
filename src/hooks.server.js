@@ -77,4 +77,3 @@ function getSessionValidationResult(session, user) {
     return { session: null, user: null };
   }
 }
-const gittt = anoying;
